@@ -1,29 +1,23 @@
-  // Replace YOUR_WEB_APP_URL with the URL of your Google Apps Script Web App
-const webAppUrl = "https://script.google.com/macros/s/AKfycbyPX3H8GS5oE2_RIEE4JBYG89iR8KrjbwVPsBjnK6wvdYxZzHFQiqWrnRBMe8jLjXHrvA/exec";
+document.getElementById('waitlist-form').addEventListener('submit', async (event) => {
+  event.preventDefault();
 
-function submitEmail() {
-  const email = document.getElementById("email").value;
-  if (email) {
-    fetch(webAppUrl, {
-      method: "POST",
-      body: JSON.stringify({ email: email }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        if (result.success) {
-          document.getElementById("email-form").innerHTML =
-            "Thank you for joining the waitlist!";
-        } else {
-          alert("Error submitting your email. Please try again.");
-        }
-      })
-      .catch((error) => {
-        alert("Error submitting your email. Please try again.");
-      });
+  const formData = new FormData(event.target);
+  const response = await fetch(event.target.action, {
+    method: 'POST',
+    body: formData,
+  });
+
+  if (response.ok) {
+    const result = await response.json();
+    if (result.result === 'success') {
+      // Display success message
+      alert('Thank you for joining the waitlist!');
+    } else {
+      // Display an error message
+      alert('An error occurred. Please try again later.');
+    }
   } else {
-    alert("Please enter your email address.");
+    // Display an error message
+    alert('An error occurred. Please try again later.');
   }
-}
+});
