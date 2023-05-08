@@ -1,5 +1,5 @@
   // Replace YOUR_WEB_APP_URL with the URL of your Google Apps Script Web App
-const webAppUrl = "https://script.google.com/macros/s/AKfycbzruoKBR141P_X-lSRXin25n2FtNX9L1Ms9W51A_R2c8W6xxJAa3RTKiWs0FLL5ONoa/exec";
+const webAppUrl = "https://script.google.com/macros/s/AKfycbyPX3H8GS5oE2_RIEE4JBYG89iR8KrjbwVPsBjnK6wvdYxZzHFQiqWrnRBMe8jLjXHrvA/exec";
 
 function submitEmail() {
   const email = document.getElementById("email").value;
