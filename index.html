@@ -40,6 +40,14 @@
 
         </div>
     </div>
+      <script>
+        function openModal() {
+            document.getElementById('modal').style.display = 'block';
+        }
+        document.getElementsByClassName('close')[0].onclick = function() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
     <script>
         AOS.init({
           duration: 1000,
