@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" />
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="resources/deny_bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay-rectangle"></div>
+    <div class="centered-rectangle">
+        <h1 class="heading" data-aos="fade-up">DENY</h1>
+        <h2 class="sub-heading" data-aos="fade-up" data-aos-delay="100">GOING BEYOND SOCIAL MEDIA POLARIZATION AND UNITING PEOPLE THROUGH <span class="highlight">CONTRADICTORY OPINIONS</span></h2>
+
+        <p class="paragraph" data-aos="fade-up" data-aos-delay="200">
+            Step into a new era of social media where different perspectives don't divide, but unite. This decentralized platform invites you to explore a world where contradictions coexist peacefully, enabling users to break free from the echo chambers, hate speech, and biases of conventional social media, allowing the beauty of contrasting opinions to flourish.
+        </p>
+        <div class="button-container" data-aos="fade-up" data-aos-delay="300">
+            <button class="waitlist-btn" onclick="openModal()">JOIN WAITLIST</button>
+            <a href="https://twitter.com/deny_social" class="social-icon" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="https://linkedin.com/company/deny-social" class="social-icon" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Join Waitlist</h2>
+            <iframe src="https://script.google.com/macros/s/AKfycbyin4wv9qC_iTOgh4Ydb-bqlW4EPIdef5DkpEhUQ_Yf9sVM-Bv4WgAqV2p1G3auYtBjjw/exec" width="100%" height="150" frameborder="0" scrolling="no"></iframe>
+            <button id="submit-btn" onclick="window.location.href='https://tally.so/r/wQM2QG'">Submit</button>
+        </div>
+    </div>
+    <script>
+        function openModal() {
+            document.getElementById('modal').style.display = 'block';
+        }
+        document.getElementsByClassName('close')[0].onclick = function() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+    <script>
+        AOS.init({
+          duration: 1000,
+        });
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
