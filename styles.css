@@ -107,6 +107,17 @@ body, html {
     border-radius: 4px;
 }
 
+.submit-btn {
+    background-color: white;
+    border: 2px solid black;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: black;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
 
 .social-icon {
     margin-left: 1rem;
@@ -118,7 +129,8 @@ body, html {
 }
 
 .waitlist-btn:hover,
-.social-icon:hover {
+.social-icon:hover,
+.submit-btn:hover{
     background-color: black;
     color: white;
     transition: all 0.3s ease;
